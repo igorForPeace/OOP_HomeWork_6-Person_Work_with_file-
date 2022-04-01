@@ -10,23 +10,23 @@ int main()
 	Person p;
 	string path = "file.txt";
 	int a;
-	cout << "ÃÂÌ˛: " << endl;
-	cout << "1 - Á‡ÔËÒ¸ ‚ Ù‡ÈÎ\n2 - ˜ÚÂÌËÂ ËÁ Ù‡ÈÎ‡" << endl;
+	cout << "√å√•√≠√æ: " << endl;
+	cout << "1 - √ß√†√Ø√®√±√º √¢ √¥√†√©√´\n2 - √∑√≤√•√≠√®√• √®√ß √¥√†√©√´√†" << endl;
 	cin >> a;
 	if (a==1)
 	{
 		ofstream out;
-		out.open(path);
+		out.open(path  /*, ofstream::app*/); // –ø–µ—Ä–µ–∑–∞–ø–∏—Å—å —Ñ–∞–π–ª–∞ –ª–∏–±–æ –∑–∞–ø–∏—Å—å –≤ –∫–æ–Ω–µ—Ü
 		if (!out.is_open())
 		{
-			cout << "‘‡ÈÎ ÌÂ ÓÚÍ˚Ú" << endl;
+			cout << "√î√†√©√´ √≠√• √Æ√≤√™√∞√ª√≤" << endl;
 		}
 		else
 		{
-			cout << "Ù‡ÈÎ ÓÚÍ˚Ú!" << endl;
+			cout << "√¥√†√©√´ √Æ√≤√™√∞√ª√≤!" << endl;
 			out << p.GetSurname() << "\n" << p.GetName() << "\n" << p.GetPatronymic()
-				<< "\n‚ÓÁ‡ÒÚ: " << p.GetAge() << "\nÓÒÚ: " << p.GetHeight()
-				<< "\n‚ÂÒ: " << p.GetWeight() << "\n‡·ÓÚ‡ÂÚ?: " << boolalpha << p.GetIsWork() << "\n";
+				<< "\n√¢√Æ√ß√∞√†√±√≤: " << p.GetAge() << "\n√∞√Æ√±√≤: " << p.GetHeight()
+				<< "\n√¢√•√±: " << p.GetWeight() << "\n√∞√†√°√Æ√≤√†√•√≤?: " << boolalpha << p.GetIsWork() << "\n";
 		}
 		out.close();
 	}
@@ -36,11 +36,11 @@ int main()
 		in.open(path);
 		if (!in.is_open())
 		{
-			cout << "‘‡ÈÎ ÌÂ ÓÚÍ˚Ú" << endl;
+			cout << "√î√†√©√´ √≠√• √Æ√≤√™√∞√ª√≤" << endl;
 		}
 		else
 		{
-			cout << "Ù‡ÈÎ ÓÚÍ˚Ú!" << endl;
+			cout << "√¥√†√©√´ √Æ√≤√™√∞√ª√≤!" << endl;
 			char ch;
 			while (in.get(ch))
 			{
